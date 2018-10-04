@@ -13,8 +13,15 @@
     <p> Go around with your mouse in the boxes and create a piece of art ! </p>
   </div>
 
-  
 <div class="gridtest">Test ena keimenaki</div>
+
+
+  <div align="center"> 
+
+<button type="button" onclick="reset()" >Reset</button>
+<button type="button" id="myBtn" onclick="changeSquares()" >Change Squares</button>
+
+</div>
 
 <div id='grid' align="center">
 </div>
@@ -22,7 +29,7 @@
 
   <script>
     function gridCreator(){
-
+      var word;
       var i,j;
     for (j = 1; j <=16; j++) { 
       document.getElementById('grid').innerHTML += "<br>";
@@ -36,6 +43,11 @@
     function changeCol(x){
       x.style.backgroundColor = 'rgb(22, 22, 22)';
                         }
+
+    function reset() {
+      location.reload()}
+
+    
 
 
    gridCreator();
