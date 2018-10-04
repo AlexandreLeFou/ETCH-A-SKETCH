@@ -14,19 +14,35 @@ p{
   color: #A52A2A;
 }
 
-.gridtest{
-  font-size: 20px;
-  font-family: Arial;
-
+.button{
+  margin-top: 25px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(38, 50, 88);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
+
+
 
 #grid{
+  margin-top: 40px;
   max-width: 960px;
   max-height: 960px;
- 
+  margin-left: auto ;
+  margin-right: auto ;
 }
+  
+  
+
+  
 div.a{
   display: inline-block;
-  padding: 5px;
-  border: 1px solid rgb(157, 157, 161);
+  padding: 4px;
+  border: 0.8px solid rgb(157, 157, 161);
 }

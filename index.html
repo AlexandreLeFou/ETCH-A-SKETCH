@@ -13,15 +13,13 @@
     <p> Go around with your mouse in the boxes and create a piece of art ! </p>
   </div>
 
-<div class="gridtest" >Test ena keimenaki</div>
+  <div align="center"> <button class="button" type="button" onclick="reset()" >Reset</button></div>
+
+<div align="center"> 
+  <button class="button" type="button" id="myBtn" onclick="changeSquares()" >Change Squares</button></div>
 
 
-  <div align="center"> 
 
-<button type="button" onclick="reset()" >Reset</button>
-<button type="button" id="myBtn" onclick="changeSquares()" >Change Squares</button>
-
-</div>
 
 <div id='grid' align="center"> </div>
 
@@ -62,15 +60,16 @@
        newj=word[1];
        console.log(i);
        console.log(j);
-      // replace_grid() ;
+       replace_grid() ;
         gridCreator();
             }
            }
 
 function replace_grid() {
   console.log("ok2");
-  element = document.getElementById("grid");
-  element.parentNode.removeChild(element);
+  document.getElementById("grid").innerHTML = "";
+
+
   
   }
 
