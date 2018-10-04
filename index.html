@@ -13,7 +13,7 @@
     <p> Go around with your mouse in the boxes and create a piece of art ! </p>
   </div>
 
-<div class="gridtest">Test ena keimenaki</div>
+<div class="gridtest" >Test ena keimenaki</div>
 
 
   <div align="center"> 
@@ -23,34 +23,61 @@
 
 </div>
 
-<div id='grid' align="center">
-</div>
+<div id='grid' align="center"> </div>
 
 
   <script>
-    function gridCreator(){
-      var word;
-      var i,j;
-    for (j = 1; j <=16; j++) { 
-      document.getElementById('grid').innerHTML += "<br>";
-     for (i = 1; i <=8; i++) { 
-        document.getElementById('grid').innerHTML += "<div onmouseover='changeCol(this)' class='a' >"+"</div>"+"<div onmouseover='changeCol(this)' class='b'>"+"</div>";
-                              }
-                            }
+    var i,j,element;
+    var word;
+    var newi=16,newj=16;      
      
-                          }
+    function gridCreator(){
+    j=1;
+    do{
+    for (i = 1; i <=newi; i++) { 
+      document.getElementById('grid').innerHTML += "<div onmouseover='changeCol(this)' class='a' >";}
+    
+    document.getElementById('grid').innerHTML += "<br>";
+    j++;
+    }while(j<=newj);}                     
+    
     
     function changeCol(x){
       x.style.backgroundColor = 'rgb(22, 22, 22)';
                         }
 
     function reset() {
-      location.reload()}
+      location.reload();}
 
-    
+    function changeSquares() {
+      console.log("ok");
+    var x = document.getElementById("myBtn");
+    var askUser = prompt("Please enter the grid's -new- size (rows,columns)! If you enter letters nothing happens... ");
+    if (askUser == null || askUser == "") {
+      alert("No iput ...");
+    } else {
+       word = askUser.split(',');
+       parseInt(word, 10)
+       newi=word[0];
+       newj=word[1];
+       console.log(i);
+       console.log(j);
+      // replace_grid() ;
+        gridCreator();
+            }
+           }
+
+function replace_grid() {
+  console.log("ok2");
+  element = document.getElementById("grid");
+  element.parentNode.removeChild(element);
+  
+  }
 
 
-   gridCreator();
+                  
+ gridCreator();
+
 //https://www.w3schools.com/css/css_inline-block.asp
   </script>
 
