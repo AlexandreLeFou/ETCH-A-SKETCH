@@ -29,28 +29,17 @@ p{
 }
 
 
-
-#grid{
-  margin-top: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  width:  650px;
-  height:  650px;
-  border: 1px solid black;
-  display: table;
-  table-layout: fixed;
+.mygrid{ 
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(209, 209, 209);
+    padding: 10px;
 
 }
-  
-  
-
-  
-div.a{
-  border: 1px solid grey;
-  display: table-cell;
-}
-
-
-.line-break {
-  display: inline-block;
+.grid-box{
+  background-color: rgba(204, 184, 184, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
 }

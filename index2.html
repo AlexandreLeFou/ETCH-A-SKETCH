@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> Etch & Sketch Project</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+
+<body>
+  <div align="center"> 
+	  <h1> Etch & Sketch Project </h1>
+    <p> Go around with your mouse in the boxes and create a piece of art ! </p>
+  </div>
+
+  <div align="center"> <button class="button" type="button" onclick="reset()" >Reset</button></div>
+
+<div align="center"> 
+  <button class="button" type="button" id="myBtn" onclick="changeSquares()" >Change Squares</button></div>
+
+
+<div id='grid-container' class="mygrid"><div> 11</div> </div>
+
+
+  <script>
+     var newi=16,newj=16;      
+     
+     function gridCreator(){
+     j=1;
+     do{
+     for (i = 1; i <=newi; i++) { 
+        const gridItem = document.createElement('div')
+        gridItem.classList.add('grid-box')
+        gridItem.addEventListener('mouseover', changeCol())
+        container.addChild(gridItem)
+        //document.getElementById('grid-container').innerHTML += "<div onmouseover='changeCol(this)' class='grid-box'  >";}
+        //document.getElementById('grid-container').innerHTML += "<br>";
+        j++;
+     }
+    }while(j<=newj);
+                            }                                   
+    
+    
+     function changeCol(x){
+       x.style.backgroundColor = 'rgb(22, 22, 22)';
+                        }
+
+                        
+
+function reset() {
+      location.reload();}
+
+
+    function changeSquares() {
+        console.log("ok");
+    var x = document.getElementById("myBtn");
+    var askUser = prompt("Please enter the grid's -new- size : rows,columns! ( MAX SIZE:[40,40] ) e.g. 4,4 or 20,20... BEWARE: If you enter anything else nothing happens... ");
+    if (askUser == null || askUser == "") {
+      alert("No iput ...");
+    } else {
+       word = askUser.split(',');
+       parseInt(word, 10)
+       newi=word[0];
+       newj=word[1];
+       console.log(i);
+       console.log(j);
+    }}
+                          
+                          
+    function changedivsize() {}
+
+
+                          
+                          
+function replace_grid() {}
+ 
+
+                  
+ gridCreator();
+
+//https://www.w3schools.com/css/css_inline-block.asp
+  </script>
+
+</body>
+</html>

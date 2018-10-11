@@ -23,7 +23,7 @@
 
 
   <script>
-    var i,j,element;
+    var i,j,element,y;
     var word;
     var newi=16,newj=16;      
      
@@ -31,10 +31,11 @@
     j=1;
     do{
     for (i = 1; i <=newi; i++) { 
-
       document.getElementById('grid').innerHTML += "<div onmouseover='changeCol(this)' class='a'  >";}
    
-    document.getElementById('grid').innerHTML += "<br>";
+    //document.getElementById('grid').innerHTML += "<br>";
+    document.getElementById('grid').innerHTML += "<div class='line-break'>";
+
     j++;
     }while(j<=newj);}                     
     
@@ -51,7 +52,7 @@
     function changeSquares() {
       console.log("ok");
     var x = document.getElementById("myBtn");
-    var askUser = prompt("Please enter the grid's -new- size : rows,columns! ( MAX SIZE:[40,40] ) e.g. 4,4 or 20,20... BEWARE: If you enter anything else nothing happens... ");
+    var askUser = prompt("Please enter the grid's -new- size : rows,columns! ( MAX SIZE:[64,64] ) e.g. 4,4 or 20,20... BEWARE: If you enter anything else nothing happens... ");
     if (askUser == null || askUser == "") {
       alert("No iput ...");
     } else {
@@ -61,15 +62,19 @@
        newj=word[1];
        console.log(i);
        console.log(j);
-       if (newi>0 && newj<=40){
+       if (newi<=64 && newj<=64 && newi>0 && newj>0){
        replace_grid() ;
         gridCreator();
-        
-      } 
+        y= 
+        document.getElementById("a").style.padding = ""+y+"";
+
+                                                    } 
         else {
         alert("Wrong iput. Beware max grid's size...");}
           }
                           }
+
+                          
                           
                           
 function replace_grid() {
