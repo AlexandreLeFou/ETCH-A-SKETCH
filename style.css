@@ -52,5 +52,6 @@ div.a{
 
 
 .line-break {
-  display: inline-block;
+  display: table-row;
+  height: 0.0001%;
 }
