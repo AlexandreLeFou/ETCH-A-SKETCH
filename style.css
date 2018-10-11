@@ -32,10 +32,10 @@ p{
 
 #grid{
   margin-top: 40px;
-  max-width: 960px;
-  max-height: 960px;
   margin-left: auto ;
   margin-right: auto ;
+  height: 800px;
+  width: 800px;
 }
   
   
@@ -43,6 +43,6 @@ p{
   
 div.a{
   display: inline-block;
-  padding: 4px;
+  padding: 10px;
   border: 0.8px solid rgb(157, 157, 161);
 }

@@ -19,8 +19,6 @@
   <button class="button" type="button" id="myBtn" onclick="changeSquares()" >Change Squares</button></div>
 
 
-
-
 <div id='grid' align="center"> </div>
 
 
@@ -33,16 +31,19 @@
     j=1;
     do{
     for (i = 1; i <=newi; i++) { 
-      document.getElementById('grid').innerHTML += "<div onmouseover='changeCol(this)' class='a' >";}
-    
+
+      document.getElementById('grid').innerHTML += "<div onmouseover='changeCol(this)' class='a'  >";}
+   
     document.getElementById('grid').innerHTML += "<br>";
     j++;
     }while(j<=newj);}                     
     
     
     function changeCol(x){
-      x.style.backgroundColor = 'rgb(22, 22, 22)';
+       x.style.backgroundColor = 'rgb(22, 22, 22)';
                         }
+
+                        
 
     function reset() {
       location.reload();}
@@ -50,7 +51,7 @@
     function changeSquares() {
       console.log("ok");
     var x = document.getElementById("myBtn");
-    var askUser = prompt("Please enter the grid's -new- size (rows,columns)! If you enter letters nothing happens... ");
+    var askUser = prompt("Please enter the grid's -new- size : rows,columns! ( MAX SIZE:[40,40] ) e.g. 4,4 or 20,20... BEWARE: If you enter anything else nothing happens... ");
     if (askUser == null || askUser == "") {
       alert("No iput ...");
     } else {
@@ -60,11 +61,17 @@
        newj=word[1];
        console.log(i);
        console.log(j);
+       if (newi>0 && newj<=40){
        replace_grid() ;
         gridCreator();
-            }
-           }
-
+        
+      } 
+        else {
+        alert("Wrong iput. Beware max grid's size...");}
+          }
+                          }
+                          
+                          
 function replace_grid() {
   console.log("ok2");
   document.getElementById("grid").innerHTML = "";
